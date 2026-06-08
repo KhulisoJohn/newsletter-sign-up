@@ -4,67 +4,152 @@
   box-sizing: border-box;
 }
 
-body{
-    background-color: hsl(234, 29%, 20%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(234, 29%, 20%);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    background-color: white;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    margin:auto auto;
-    align-items: center;
-    padding: 20px 20px;
-    border-radius: 5%;
+  background: white;
+  width: 100%;
+  max-width: 900px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 40px;
+  border-radius: 20px;
+  gap: 40px;
 }
 
 .card1 {
-    margin: 0 auto;
+  flex: 1;
 }
 
 .card1 h2 {
-font-size: 56px;
-padding-bottom: 20px;
+  font-size: 52px;
+  margin-bottom: 20px;
 }
 
 .card1 p {
-    padding-bottom: 30px;
-} 
+  margin-bottom: 20px;
+  color: hsl(235, 18%, 26%);
+}
 
 .card1 ul li {
-    list-style: none;
-    margin-bottom: 20px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
-.label {
-    font-weight: 600;
-    display: block;
+form {
+  display: flex;
+  flex-direction: column;
 }
+
+form label {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
 form input {
-    width: 100%;
-    height: 40px;
-}
-form button {
-    width: 100%;
-    background-color: hsl(235, 18%, 26%);
-    color: white;
+  height: 45px;
+  padding: 10px;
+  border: 1px solid hsl(0, 0%, 58%);
+  border-radius: 6px;
+  margin-bottom: 15px;
 }
 
-form button:active{
-    background-color: hsl(4, 100%, 67%);
-    color: white;
+form button {
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background: hsl(235, 18%, 26%);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: hsl(4, 100%, 67%);
+}
+
+.card2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.card2 img {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+}
+
+.mobile-img {
+  display: none !important;
 }
 
 .message {
     display: none;
 }
 
-.attribution{
-    display: none;
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px;
+    gap: 25px;
+  }
+
+  .card1 h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .card2 {
+    width: 100%;
+    order: -1;
+  }
+
+  .card2 img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+
+  .desktop-img {
+    display: none !important;
+  }
+
+  .mobile-img {
+    display: block !important;
+    width: 100%;
+  }
+
+  .card1 {
+    padding: 20px;
+  }
+
+  .card1 h2 {
+    font-size: 32px;
+  }
 }

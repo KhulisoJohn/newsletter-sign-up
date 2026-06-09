@@ -18,11 +18,9 @@ body {
   background: white;
   width: 100%;
   max-width: 900px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 40px;
   border-radius: 20px;
   gap: 40px;
@@ -112,6 +110,20 @@ form button:hover {
   padding: 40px;
   border-radius: 20px;
   max-width: 400px;
+}
+
+.message button {
+    padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background: hsl(235, 18%, 26%);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.message button:hover {
+   background: hsl(4, 100%, 67%);
 }
 
 @media (max-width: 1024px) {
